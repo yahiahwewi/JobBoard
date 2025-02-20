@@ -8,6 +8,8 @@ import java.util.List;
 @Service
 public class CandidatService {
     @Autowired
+
+
     private CandidatRepository candidatRepository;
     public List<Candidat> findAll() {
         return candidatRepository.findAll();

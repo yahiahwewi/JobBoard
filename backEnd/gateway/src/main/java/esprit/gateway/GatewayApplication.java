@@ -19,7 +19,14 @@ public class GatewayApplication {
         return builder.routes()
                 .route("candidat",
                         r->r.path("/candidats/**")
-                        .uri("lb://candidat")).
+                        .uri("lb://candidat"))
+
+                   .route("job",r->r.path("/Mic2/**")
+                .uri("lb://job"))
+
+                        .route("meeting",r->r.path("/Mic3/**")
+                .uri("lb://meeting")).
+
                 build();
      }
 
